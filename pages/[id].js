@@ -31,7 +31,10 @@ export default function Words({wordsData}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          words.
+          {wordsData.title ? (
+            wordsData.title   
+          ):(<>words.
+          </>)}  
         </h1>
         
         <div className={styles.content} dangerouslySetInnerHTML={{ __html: wordsData.contentHtml }} />
