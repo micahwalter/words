@@ -29,7 +29,7 @@ export default function Home() {
   )
 }
 
-function fetchHello () {
+function useHello () {
   const { data, error } = useSWR(`/api/hello`, fetcher)
 
   return {
@@ -44,7 +44,7 @@ function Spinner () {
 }
 
 function Content () {
-  const { says, isLoading } = fetchHello()
+  const { says, isLoading } = useHello()
   if (isLoading) return <Spinner />
   return <p>{says.saying}</p>
 }
