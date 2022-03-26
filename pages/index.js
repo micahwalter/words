@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import useSWR from 'swr'
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
         </h1>
         
         <p className={styles.description}>
-          a prototype
+          <Content />
         </p>
       </main>
 
@@ -25,4 +27,24 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+function fetchHello () {
+  const { data, error } = useSWR(`/api/hello`, fetcher)
+
+  return {
+    says: data,
+    isLoading: !error && !data,
+    isError: error
+  }
+}
+
+function Spinner () {
+  return <p>Loading...</p>
+}
+
+function Content () {
+  const { says, isLoading } = fetchHello()
+  if (isLoading) return <Spinner />
+  return <p>{says.saying}</p>
 }
