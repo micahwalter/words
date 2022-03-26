@@ -24,8 +24,8 @@ export default function Words({wordsData}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>words. by Micah Walter</title>
-        <meta name="description" content="words. by Micah Walter" />
+        <title>{wordsData.title ? (`${wordsData.title} | `):("")}words. by Micah Walter</title>
+        <meta name="description" content={wordsData.title ? (`${wordsData.title} | words. by Micah Walter`):("words. by Micah Walter")} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
