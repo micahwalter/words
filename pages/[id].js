@@ -6,11 +6,11 @@ import { getAllWordsIds, getWordsData } from '../lib/words'
 export async function getStaticProps({ params }) {
     const wordsData = await getWordsData(params.id)
     return {
-      props: {
+        props: {
         wordsData
-      }
+        }
     }
-  }
+}
 
 export async function getStaticPaths() {
     const paths = getAllWordsIds()
@@ -18,30 +18,30 @@ export async function getStaticPaths() {
         paths,
         fallback: false
     }
-  }
+}
 
 export default function Words({wordsData}) {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>{wordsData.title ? (`${wordsData.title} | `):("")}words. by Micah Walter</title>
-        <meta name="description" content={wordsData.title ? (`${wordsData.title} | words. by Micah Walter`):("words. by Micah Walter")} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className={styles.container}>
+            <Head>
+            <title>{wordsData.title ? (`${wordsData.title} | `):("")}words. by Micah Walter</title>
+            <meta name="description" content={wordsData.title ? (`${wordsData.title} | words. by Micah Walter`):("words. by Micah Walter")} />
+            <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          {wordsData.title ? (
-            wordsData.title   
-          ):(<>words.
-          </>)}  
-        </h1>
-        
-        <div className={styles.content} dangerouslySetInnerHTML={{ __html: wordsData.contentHtml }} />
-      </main>
+            <main className={styles.main}>
+            <h1 className={styles.title}>
+                {wordsData.title ? (
+                wordsData.title   
+                ):(<>words.
+                </>)}  
+            </h1>
+            
+            <div className={styles.content} dangerouslySetInnerHTML={{ __html: wordsData.contentHtml }} />
+            </main>
 
-      <footer>
-      </footer>
-    </div>
-  )
+            <footer>
+            </footer>
+        </div>
+    )
 }
