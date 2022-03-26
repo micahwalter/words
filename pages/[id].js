@@ -34,9 +34,7 @@ export default function Words({wordsData}) {
           words.
         </h1>
         
-        <p className={styles.description}>
-            <div dangerouslySetInnerHTML={{ __html: wordsData.contentHtml }} />
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: wordsData.contentHtml }} />
       </main>
 
       <footer>
