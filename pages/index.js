@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import useSWR from 'swr'
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -18,33 +16,13 @@ export default function Home() {
           words.
         </h1>
         
-        <p className={styles.description}>
-          <Content />
-        </p>
+        <Link href="/hello">
+          <a>hello.</a>
+        </Link>
       </main>
 
       <footer>
       </footer>
     </div>
   )
-}
-
-function useHello () {
-  const { data, error } = useSWR(`/api/hello`, fetcher)
-
-  return {
-    says: data,
-    isLoading: !error && !data,
-    isError: error
-  }
-}
-
-function Spinner () {
-  return <p>Loading...</p>
-}
-
-function Content () {
-  const { says, isLoading } = useHello()
-  if (isLoading) return <Spinner />
-  return <p>{says.saying}</p>
 }
