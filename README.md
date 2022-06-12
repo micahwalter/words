@@ -1,3 +1,3 @@
-# words. 
+# words
 
-### by Micah Walter
+## by Micah Walter
