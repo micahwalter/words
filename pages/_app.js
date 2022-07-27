@@ -13,8 +13,8 @@ function App({ Component, pageProps }) {
     //  - Do not include https://
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
-    Fathom.load("JYTBSYSP", {
-      url: 'https://scientific-code.micahwalter.com/script.js',
+    Fathom.load("BQSMBQKX", {
+      url: 'https://life-on-mars-twentyone.micahwalter.com/script.js',
       includedDomains: ['words.micahwalter.com'],
     });
 
