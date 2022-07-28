@@ -5,4 +5,4 @@ title: point in time.
 
 "I think of big moments in history like when the Challenger blew up. I was sitting on the floor in class, watching it on a large TV, strapped to a cart. The teacher eventually just shut the TV off and started talking about something else. I can remember it so vividly. I'm weirdly proud of that memory, like I was there, so that makes me interesting, but so were so many other people."
 
-"Today. I will remember today, and us, and what happened today. I promise."
+"Today. I will [remember today](/you-cant-go-home), and us, and what happened today. I promise."

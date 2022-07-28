@@ -9,7 +9,7 @@ title: a moment ago.
 
 "I see the stump, maybe."
 
-"Maybe it was nothing. I dunno. It looked like a quick flash of light. Like a reflection, or a glimmer. Maybe it will come back."
+"Maybe [it was nothing](/point-in-time). I dunno. It looked like a quick flash of light. Like a reflection, or a glimmer. Maybe it will come back."
 
 "I'll be ready this time."
 

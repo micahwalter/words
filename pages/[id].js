@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Words.module.css'
+import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 import { getAllWordsIds, getWordsData } from '../lib/words'
 
@@ -40,8 +41,11 @@ export default function Words({wordsData}) {
             <div dangerouslySetInnerHTML={{ __html: wordsData.contentHtml }} />
             </main>
 
-            <footer>
-            </footer>
+        <footer className={styles.footer}>
+            <Link href="https://www.micahwalter.com">
+          <a>micahwalter.com</a>
+        </Link>      
+      </footer>
         </div>
     )
 }
